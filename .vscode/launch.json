@@ -2,17 +2,23 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "C/C++ Runner: Debug Session",
-      "type": "lldb",
+      "name": "(lldb) Launch",
+      "type": "cppdbg",
       "request": "launch",
+      "program": "${workspaceFolder}/a.out",
       "args": [],
-      "stopAtEntry": true,
-      "cwd": "/Users/johnma/CPC",
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
       "environment": [],
-      "program": "/Users/johnma/CPC/build/Debug/outDebug",
-      "internalConsoleOptions": "openOnSessionStart",
-      "MIMode": "gdb",
-      "console": "integratedTerminal"
+      "externalConsole": false,
+      "MIMode": "lldb"
     }
+    
+
+    
+
+
+ 
+    
   ]
 }
