@@ -1,13 +1,12 @@
 #include <iostream>
 #include <vector>
-
+#include <algorithm>
 using namespace std;
 
 int main(){
     int testcases, i, vectlen, j, helper, last, counter;
     vector<int> vect, outputs;
     std::cin >> testcases;
-    std::string line;
     i = 0;
     while(i < testcases)
         std::cin >> vectlen;
@@ -16,7 +15,7 @@ int main(){
             std::cin >> helper;
             vect.push_back(helper);
             j++;
-        sort(vect.begin(), vect.end());
+        std::sort(vect.begin(), vect.end());
         j = 0;
         last = -1;
         while(j < vectlen)
