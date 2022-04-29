@@ -6,8 +6,7 @@ int main(){
     int testcases;
     int rating;
     vector<int> ratings;
-    std::cin >> testcases;
-    
+    std::cin >> testcases; 
     int i = 0;
     while (i < testcases){
         std::cin >> rating;
