@@ -1,25 +1,18 @@
 #include <bits/stdc++.h>
-#define pb push_back
-#define mp make_pair
-#define all(v) v.begin(), v.end()
 using namespace std;
 
 void solve(){
-    int n; cin >> n;
-    vector<int> whiteboard;
-    for(int i = 1; i <= n; i++){
-        whiteboard.pb(i);
+    int x, y, a, b;
+    cin >> x >> y >> a >> b;
+    int cost = 0;
+    while(x > 0 && y > 0){
+        x--; y--; cost+= b;
     }
-    vector<pair<int,int>> operations;
-    for(int i = 0; i < n-1; i++){
-        operations.pb(mp(whiteboard[1], whiteboard[whiteboard.size()-1]));
-        whiteboard.erase(whiteboard.begin()+1);
-        whiteboard.pop_back();
+    while(x > 0 ^ y > 0){
+        x > 0 ? x-- : y--;
+        cost+= a;
     }
-    cout << whiteboard[0] << '\n';
-    for(auto p : operations){
-        cout << p.first << " " << p.second << '\n';
-    }
+    cout >> cost >> '\n';
 }
 int main(){
     int T; cin >> T;
