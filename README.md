@@ -7,3 +7,5 @@ todo:
 - [ ] friends.cpp
 - [ ] transform.cpp
 - [ ] rankteams.cpp
+
+![alt-text](https://github.com/johnma02/cpp-compprog/template.cpp)
