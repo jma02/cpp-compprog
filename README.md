@@ -8,4 +8,4 @@ todo:
 - [ ] transform.cpp
 - [ ] rankteams.cpp
 
-![alt-text](https://github.com/johnma02/cpp-compprog/template.cpp)
+![alt-text](https://github.com/johnma02/cpp-compprog/blob/main/template.cpp)
