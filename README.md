@@ -8,4 +8,23 @@ todo:
 - [ ] transform.cpp
 - [ ] rankteams.cpp
 
-![alt-text](https://github.com/johnma02/cpp-compprog/blob/main/template.cpp)
+Current Template:
+```c++
+#include <bits/stdc++.h>
+#define pb push_back
+#define mp make_pair
+#define f first
+#define s second
+#define all(v) v.begin(), v.end()
+
+typedef long long ll
+using namespace std;
+
+void solve(){
+
+}
+
+int main(){
+
+}
+```
