@@ -17,7 +17,7 @@ Current Template:
 #define s second
 #define all(v) v.begin(), v.end()
 
-typedef long long ll
+typedef long long ll;
 using namespace std;
 
 void solve(){
