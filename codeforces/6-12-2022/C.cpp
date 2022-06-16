@@ -8,18 +8,31 @@
 typedef long long ll;
 using namespace std;
 
-void solve(){   
-    ll l; cin >> l;
-    string a, b; cin >> a >> b;
-    if(a == b) cout << "YES" << '\n';
-    else if(l == 1) cout << "NO" << '\n';
-    else if(a > b) cout << "NO" << '\n';
-    else cout << "YES" << '\n';
-}   
+void solve(){
+    int N; string s, t; cin >> N >> s >> t;
+    if(count(all(s),'b') != count(all(t),'b')){
+        cout << "NO" << '\n';
+        return;
+    } 
+    int j = 0;
+    for(int i = 0; i < N; i++){
+        if(s[i] == 'b') continue;
+        while(t[j] == 'b') j++;
+        if(s[i] != t[j] || (s[i] == 'a' && i > j) || (s[i] == 'c' && j > i)){
+            cout << "NO" << '\n';
+            return;
+        }
+        j++;
+    }
+    cout << "YES" << '\n';
+}
 
 int main(){
-    ll T; cin >> T;
+    ios_base::sync_with_stdio(false);  
+    cin.tie(NULL);  
+    int T; cin >> T;
     while(T--){
         solve();
     }
+    return 0;
 }
