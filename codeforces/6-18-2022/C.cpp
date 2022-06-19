@@ -11,22 +11,23 @@ using ll = long long;
 using namespace std;
 
 void solve(){
-    int a,b; cin >> a >> b;
-    while(a && b){
-        cout << 10;
-        a--; b--;
+    int n, m; cin >> n >> m;
+    if((n+m)%2 == 0){
+        cout << "NO" << '\n';
+        return;
     }
-    while(a--) cout << 0;
-    while(b--) cout << 1;
-    cout << '\n';
+    int grid[n][m];
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++){
+            cin >> grid[n][m];
+        }
+    }
+    
 }
 
 int main(){
     ios_base::sync_with_stdio(false);  
     cin.tie(NULL);  
-    int T; cin >> T;
-    while(T--){
-        solve();
-    }
+
     return 0;
 }
