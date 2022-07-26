@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.26)  26 JUL 2022 19:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.26)  26 JUL 2022 19:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -123,7 +123,7 @@ File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count271
 \l__pdf_internal_box=\box52
 )
-No file chocofiesta.aux.
+(./chocofiesta.aux)
 \openout1 = `chocofiesta.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -142,6 +142,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
 
+
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -155,8 +156,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ] [2]
 (./chocofiesta.aux) ) 
 Here is how much of TeX's memory you used:
- 1896 strings out of 478268
- 27082 string characters out of 5846347
+ 1898 strings out of 478268
+ 27114 string characters out of 5846347
  326667 words of memory out of 5000000
  20142 multiletter control sequences out of 15000+600000
  471619 words of font info for 38 fonts, out of 8000000 for 9000
@@ -174,7 +175,7 @@ cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 .pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
 fb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
 10.pfb>
-Output written on chocofiesta.pdf (2 pages, 108675 bytes).
+Output written on chocofiesta.pdf (2 pages, 108544 bytes).
 PDF statistics:
  66 PDF objects out of 1000 (max. 8388607)
  39 compressed objects within 1 object stream
