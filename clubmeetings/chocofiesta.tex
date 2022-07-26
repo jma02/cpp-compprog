@@ -1,0 +1,76 @@
+\documentclass{article}
+
+\usepackage{amsmath,amsthm,amssymb,fancyhdr}
+
+\pagestyle{fancy}
+\lhead{A Chocolate Fiesta: Ad Infinitum - Math Programming Contest March'14}
+\begin{document}
+
+
+Suppose the sum of a set of integers is the result of adding together all the integers in that set. Given a non-empty set $S$ consisting of $n$ integers, What is the number of non-empty subsets of $S$ which have an even sum? 
+
+\vspace{5mm}
+
+\textbf{Case 1}: $S$ consists only of even integers. Then with certainty we can say that for all subsets $s$ of $S$, the sum of $s$ is even. Thus, the number of non-empty subsets of S with even sum is equal to $2^{n}-1$.
+
+\vspace{5mm}
+
+\textbf{Case 2}: $S$ consists of even and odd integers. We know that all subsets of $S$ formed exclusively by even integers have even sum. Additionally, we know that all subsets of $S$ with even sum formed exclusively by odd integers must have even cardinality. 
+
+\vspace{5mm}
+
+Let $O$ be the set of all odd integers in $S$. Finding the number of even-sized subsets of the set $O$ is equivalent to summing the number of ways one can choose 2 elements from $O$, and the number of ways to choose 4 elements, and then 6 elements, and so forth. 
+\vspace{5mm}
+
+Let $x$ be the number of elements in $O$, then the number of even-sized subsets of $O$ is equal to the sum of all $2k$ combinations of $O$, where $k \in \mathbb{Z}$, $0 \le k \le \lfloor \frac{x}{2} \rfloor$, which we write as
+
+\begin{equation}
+\displaystyle\sum_{k=0}^{\lfloor \frac{x}{2} \rfloor} \binom{x}{2k} = \binom{x}{0} + \binom{x}{2} + \cdots + \binom{x}{2k}
+\end{equation}
+
+\vspace{5mm}
+
+If we observe the binomial expansion of $(1-1)^{x}$, we notice that
+
+  \begin{align*}
+    (1-1)^{x} &= \displaystyle\sum_{k=0}^{x} \binom{x}{k}1^{x-k}(-1)^{k}\\
+    0 &= \displaystyle\sum_{k=0}^{x} \binom{x}{k}(-1)^{k}\\
+    0 &= \binom{x}{0} - \binom{x}{1} + \binom{x}{2} - \binom{x}{3} + \cdots \\
+    \binom{x}{1} +  \binom{x}{3} + \cdots &= \binom{x}{0} + \binom{x}{2}+ \cdots\\
+    \displaystyle\sum_{k=0}^{\lfloor \frac{x}{2} \rfloor} \binom{x}{2k+1} &=   \displaystyle\sum_{k=0}^{\lfloor \frac{x}{2} \rfloor} \binom{x}{2k}\\
+  \end{align*}
+  
+\vspace{5mm}
+
+
+$\sum_{k=0}^{\lfloor \frac{x}{2} \rfloor} \binom{x}{2k+1}$ is equal to the number of odd-sized subsets of $O$. Thus, the number of odd-sized subsets of $O$ is equal to the number of even-sized subsets of $O$. Let $\alpha$ be the number of odd-sized subsets of $O$, and let $\beta$ be the number of even-sized subsets of $O$. We know that $\alpha + \beta$ must equal the total number of subsets in $O$. Thus, we have the following equations
+
+  \begin{equation}
+  \alpha - \beta = 0
+\end{equation} 
+\begin{equation}
+  \alpha + \beta = 2^{x}
+\end{equation} 
+
+\vspace{5mm}
+thus
+\begin{align*}
+   2\alpha &= 2^{x}\\
+   \alpha &= 2^{x-1}
+  \end{align*}  
+
+\vspace{5mm}
+We can pair any even-sized subsets of $O$ with any subset of $S$ containing only even integers to produce a subset of $S$ with even sum. Let $y$ be the number of even integers in $S$. Then the following expression will give us the number of non-empty subsets of $S$ with even sum
+  \begin{equation}
+  2^{x-1}\cdot2^{y} - 1
+\end{equation} 
+
+But, $x + y$ must equal $n$. Therefore
+\begin{align*}
+2^{x-1}\cdot2^{y}&= 2^{x+y-1} - 1\\
+&= 2^{n-1} - 1
+  \end{align*}  
+\vspace{5mm}
+Thus, the number of non-empty subsets of $S$ with even sum equals $2^{n-1} -1$
+  \end{document}
+  
