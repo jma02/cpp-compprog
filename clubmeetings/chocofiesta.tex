@@ -37,13 +37,13 @@ If we observe the binomial expansion of $(1-1)^{x}$, we notice that
     0 &= \displaystyle\sum_{k=0}^{x} \binom{x}{k}(-1)^{k}\\
     0 &= \binom{x}{0} - \binom{x}{1} + \binom{x}{2} - \binom{x}{3} + \cdots \\
     \binom{x}{1} +  \binom{x}{3} + \cdots &= \binom{x}{0} + \binom{x}{2}+ \cdots\\
-    \displaystyle\sum_{k=0}^{\lfloor \frac{x}{2} \rfloor} \binom{x}{2k+1} &=   \displaystyle\sum_{k=0}^{\lfloor \frac{x}{2} \rfloor} \binom{x}{2k}\\
+    \displaystyle\sum_{k=0}^{\lfloor \frac{x-1}{2} \rfloor} \binom{x}{2k+1} &=   \displaystyle\sum_{k=0}^{\lceil \frac{x-1}{2} \rceil} \binom{x}{2k}\\
   \end{align*}
   
 \vspace{5mm}
 
 
-$\sum_{k=0}^{\lfloor \frac{x}{2} \rfloor} \binom{x}{2k+1}$ is equal to the number of odd-sized subsets of $O$. Thus, the number of odd-sized subsets of $O$ is equal to the number of even-sized subsets of $O$. Let $\alpha$ be the number of odd-sized subsets of $O$, and let $\beta$ be the number of even-sized subsets of $O$. We know that $\alpha + \beta$ must equal the total number of subsets in $O$. Thus, we have the following equations
+$\sum_{k=0}^{\lfloor \frac{x-1}{2} \rfloor} \binom{x}{2k+1}$ is equal to the number of odd-sized subsets of $O$. Thus, the number of odd-sized subsets of $O$ is equal to the number of even-sized subsets of $O$. Let $\alpha$ be the number of odd-sized subsets of $O$, and let $\beta$ be the number of even-sized subsets of $O$. We know that $\alpha + \beta$ must equal the total number of subsets in $O$. Thus, we have the following equations
 
   \begin{equation}
   \alpha - \beta = 0
