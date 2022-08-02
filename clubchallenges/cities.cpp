@@ -5,7 +5,7 @@ using ll = long long;
 const ll MN = 3001;
 vector<int> adj[MN];
 vector<array<ll, 3>> cities;
-vector<bool> visited(MN,false);
+vector<int> visited(MN,0);
 ll comp = 0;
 void dfs(ll node){
     visited[node]=true;
@@ -48,7 +48,7 @@ int main(){
     }
     ll ans = -1;
     for(int i = 1; i <= n; i++){
-        visited.resize(MN, false);
+        visited.assign(MN, 0);
         comp = 0;
         dfs(i);
         ans = max(comp, ans);
