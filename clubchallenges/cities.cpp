@@ -4,7 +4,7 @@ using namespace std;
 using ll = long long;
 const ll MN = 3001;
 vector<int> adj[MN];
-vector<array<ll, 3>> cities;
+vector<vector<ll>> cities;
 vector<int> visited(MN,0);
 ll comp = 0;
 void dfs(ll node){
@@ -23,17 +23,16 @@ int main(){
     freopen("data.txt", "r", stdin);
     freopen("soln.txt", "w", stdout);
 
-
     auto cross = [](auto x1, auto x2, auto y1, auto y2){
-        return ceil(sqrt(pow(x2-x1,2)+pow(y2-y1,2)));};
+        return (x2-x1)*(x2-x1)+(y2-y1)*(y2-y1);};
 
     ll n; cin >> n;
     cities.push_back({0,0,0});
-    for(int i = 1; i <= n; i++){
+    for(int i = 0; i < n; i++){
         ll x, y, p; cin >> x >> y >> p;
-        cities.push_back({x,y,p});
+        cities.push_back({x,y,p*p});
     }
-    for(int i = 1; i < n; i++){
+    for(int i = 1; i <= n; i++){
         for(int j = i; j <= n; j++){
             if(i==j)continue;
             if(cities[i][2]>=cross(cities[i][0],cities[j][0],
@@ -46,6 +45,7 @@ int main(){
             }
         }
     }
+
     ll ans = -1;
     for(int i = 1; i <= n; i++){
         visited.assign(MN, 0);
