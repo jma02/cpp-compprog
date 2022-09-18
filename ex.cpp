@@ -1,43 +1,19 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-
-#include <complex>
-#include <iostream>
-#include <valarray>
-
-const double PI = 3.141592653589793238460;
-
-typedef std::complex<double> Complex;
-typedef std::valarray<Complex> CArray;
-
-// Cooley–Tukey FFT (in-place)
-void fft(CArray& x)
-{
-	const size_t N = x.size();
-	if (N <= 1) return;
-
-	// divide
-	CArray even = x[std::slice(0, N/2, 2)];
-	CArray  odd = x[std::slice(1, N/2, 2)];
-
-	// conquer
-	fft(even);
-	fft(odd);
-
-	// combine
-	for (size_t k = 0; k < N/2; ++k)
-	{
-		Complex t = std::polar(1.0, -2 * PI * k / N) * odd[k];
-		x[k    ] = even[k] + t;
-		x[k+N/2] = even[k] - t;
-	}
-}
-
-
+using ll = long long;
 int main(){
-    ios_base::sync_with_stdio(false);  
-    cin.tie(NULL);
-    
-}
+    for(int n = 0; n < 27; n++){
 
+    ll sum = 0;
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < i*i; j++){
+            for(int k = 0; k < j; k++){
+                sum++;
+            }
+        }
+    }
+
+    cout << sum << '\n';
+    }
+}
