@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+const int MOD = 998244353;
+using ll = long long;
+
+ll fact[61], inv[61];
+void solve(){
+   int n; cin >> n;
+   ll j = 1;
+   ll ans = 0;
+    
+   for(int i = n-1; i>0; i-=3){
+       ll res=fact[i]*inv[n/2-j];
+       res%=MOD;
+       res*= inv[i-(n/2-j)];
+       res%=MOD;
+       ans+=res;
+       ans%=MOD;
+       j++;
+   }
+  cout << ans << " "<< " " << " " << 1 << '\n';
+}
+
+int main(){
+    ios_base::sync_with_stdio(false);  
+    cin.tie(NULL);
+    fact[0]=1;
+    for(int i = 1; i <= 60; i++){
+        fact[i]=i*fact[i-1]%MOD;
+    }
+
+   inv[1] = 1;
+   for (int i=2; i<=60; ++i){
+	inv[i] = (MOD - (MOD/i) * inv[MOD%i] % MOD) % MOD; 
+   }   
+   int t; cin >> t;
+   while(t--) solve();
+}
+
