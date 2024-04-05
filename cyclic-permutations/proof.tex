@@ -1,0 +1,39 @@
+\documentclass[letterpaper,12pt]{article}
+\setlength{\headheight}{15pt}
+\setlength{\marginparwidth}{0pt}
+\setlength{\marginparsep}{0pt} % width of space between body text and margin notes
+\setlength{\evensidemargin}{0.125in} % Adds 1/8 in. to binding side of all 
+% even-numbered pages when the "twoside" printing option is selected
+\setlength{\oddsidemargin}{0.125in} % Adds 1/8 in. to the left of all pages when "oneside" printing is selected, and to the left of all odd-numbered pages when "twoside" printing is selected
+\setlength{\textwidth}{6.375in} % assuming US letter paper (8.5 in. x 11 in.) and side margins as above
+\raggedbottom
+\setlength{\parskip}{\medskipamount}
+
+
+\usepackage{amsmath, amsthm, amssymb, fancyhdr, enumitem, tikz, pgfplots, float}
+
+\pgfplotsset{compat=1.18}
+
+\pagestyle{fancy}
+\lhead{Cyclic Permutations}
+\begin{document}
+\textbf{All edges are assumed to be undirected.}
+
+
+Problem setup: When considering a new index $p_i$, add up to two edges: add ($i, j$), such that
+$j$ is maximized, $1 \le j < i$, and $p_j > p_i$, and add ($i, k$) such that $k$ is minimized,
+$i < k \le n$, and $p_k > p_i$. 
+If no such $j$ exists, do not add ($i, j$), and likewise for $k$.
+
+
+\textbf{Observations:}
+For no edge to be added to an index, $p_1, \ldots, p_i$ must be monotonically increasing, and 
+$p_i, \ldots, p_n$ must be monotonically decreasing.
+
+We count the number of acyclic permutations, rather than counting the number
+of cyclic permutations.
+
+\end{document}
+
+
+
